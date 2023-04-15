@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "pydatacolor"
+version = "0.1.0"
+description = "Connection to Datacolor"
+authors = ["Humphrey Drummond <hum3@drummond.info>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pyusb = "^1.2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
