@@ -8,6 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 pyusb = "^1.2.1"
+libusb = "^1.0.26b5"
 
 
 [build-system]

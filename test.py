@@ -15,6 +15,9 @@ print(f'There are {count} devices  in the system')
 dev = usb.core.find(idVendor=0x085c, idProduct=0x0007)
 if dev is None:
     print ('Our device is not connected')
+else:
+    print(f"Wahhay device is connected {dev}")
+
 
 
 print("Done this")
