@@ -3,110 +3,101 @@ dev = usb.core.find()
 
 
 class DataColor:
+    """According to http://www.linux-usb.org/usb.ids 
+    Vendor IDS are 
+085c  ColorVision, Inc.
+	0100  Spyder 1
+	0200  Spyder 2
+	0300  Spyder 3
 
-    def __init__(self, dev):
+The output of printing dev was you have found your device is:
+DEVICE ID 085c:0007 on Bus 001 Address 008 =================
+ bLength                :   0x12 (18 bytes)
+ bDescriptorType        :    0x1 Device
+ bcdUSB                 :  0x110 USB 1.1
+ bDeviceClass           :    0x0 Specified at interface
+ bDeviceSubClass        :    0x0
+ bDeviceProtocol        :    0x0
+ bMaxPacketSize0        :   0x40 (64 bytes)
+ idVendor               : 0x085c
+ idProduct              : 0x0007
+ bcdDevice              :    0x0 Device 0.0
+ iManufacturer          :    0x1 Error Accessing String
+ iProduct               :    0x2 Error Accessing String
+ iSerialNumber          :    0x0
+ bNumConfigurations     :    0x1
+  CONFIGURATION 1: 64 mA ===================================
+   bLength              :    0x9 (9 bytes)
+   bDescriptorType      :    0x2 Configuration
+   wTotalLength         :   0x27 (39 bytes)
+   bNumInterfaces       :    0x1
+   bConfigurationValue  :    0x1
+   iConfiguration       :    0x0
+   bmAttributes         :   0x80 Bus Powered
+   bMaxPower            :   0x20 (64 mA)
+    INTERFACE 0: Reserved ==================================
+     bLength            :    0x9 (9 bytes)
+     bDescriptorType    :    0x4 Interface
+     bInterfaceNumber   :    0x0
+     bAlternateSetting  :    0x0
+     bNumEndpoints      :    0x3
+     bInterfaceClass    :    0x0 Reserved
+     bInterfaceSubClass :    0x0
+     bInterfaceProtocol :    0x0
+     iInterface         :    0x0
+      ENDPOINT 0x81: Interrupt IN ==========================
+       bLength          :    0x7 (7 bytes)
+       bDescriptorType  :    0x5 Endpoint
+       bEndpointAddress :   0x81 IN
+       bmAttributes     :    0x3 Interrupt
+       wMaxPacketSize   :    0x8 (8 bytes)
+       bInterval        :    0xa
+      ENDPOINT 0x82: Bulk IN ===============================
+       bLength          :    0x7 (7 bytes)
+       bDescriptorType  :    0x5 Endpoint
+       bEndpointAddress :   0x82 IN
+       bmAttributes     :    0x2 Bulk
+       wMaxPacketSize   :    0x8 (8 bytes)
+       bInterval        :    0x0
+      ENDPOINT 0x2: Bulk OUT ===============================
+       bLength          :    0x7 (7 bytes)
+       bDescriptorType  :    0x5 Endpoint
+       bEndpointAddress :    0x2 OUT
+       bmAttributes     :    0x2 Bulk
+       wMaxPacketSize   :    0x8 (8 bytes)
+       bInterval        :    0x0
+
+    """
+
+    def __init__(self, idVendor=0x085c, idProduct=0x0007, verbose=False):
         """dev is usb.core find instance"""
-        self.dev = dev
         self.CMD_GET_FIRMWARE_VERSION = 0x02  # Get firmware version (returns 4 bytes)
         self.CMD_SOFT_RESET           = 0x04  # Soft reset (returns nothing)
         self.CMD_MEASURE              = 0x0A  # Measure
         self.CMD_CALIBRATE            = 0x12  # Calibrate
         self.CMD_READ_MEMORY          = 0x16  # Read from CM3 memory
         self.CMD_WRITE_MEMORY         = 0x17  # Write to CM3 memory
-
-    def command(self, code, msg = "", num_out=None):
-        if num_out == None:
-        	num_out = len(msg)
-        self.dev.write(code, msg, num_out)
-        ret = self.dev.read(code+128, len(msg), 100)
-        sret = ''.join([chr(x) for x in ret])
-        print(f"Cmd {code} = {sret}")
-        return sret
-
-# 	unsigned char buf[256];
-# 	static unsigned char cm3_command_tag = 0;
-# 	unsigned char tag_this, status;
-# 	int err, pos, count;
-
-# 	assert(len != NULL);
-# 	assert(*len >= 0);
-# 	assert(*len < ((int)sizeof(buf)-3));
-
-# 	/***
-# 	 * Packet format:
-# 	 * <TAG> <LEN> <CMD> <PAYLOAD>
-# 	 */
-# 	buf[0] = tag_this = cm3_command_tag;
-# 	buf[1] = *len + 3;  // Counts the 3-byte header too
-# 	buf[2] = cmd;
-
-# 	cm3_command_tag = (cm3_command_tag + 1) & 0x7F;
-
-# 	// Copy in the payload
-# 	if (*len > 0) {
-# 		memcpy(&buf[3], payload, *len);
-# 	}
+        self.dev = usb.core.find(idVendor=idVendor, idProduct=idProduct)
+        # set_configuration not implemented
+        if self.dev:
+            self.dev.set_configuration()
+        if verbose:
+            if self.dev is None:
+                print ('Our device is not connected')
+            else:
+                print(f"Wahhay device is connected \n{self.dev}")
+                pass
 
 
-# >>> msg = 'test'
-# >>> assert len(dev.write(1, msg, 100)) == len(msg)
-# >>> ret = dev.read(0x81, len(msg), 100)
-# >>> sret = ''.join([chr(x) for x in ret])
-# >>> assert sret == msg
-
-# 	// Send command
-# 	pos = 0;
-# 	while (pos < (*len + 3)) {
-# 		// 1-sec timeout
-# 		err = libusb_bulk_transfer(devh, 2 | LIBUSB_ENDPOINT_OUT, &buf[pos], (*len + 3) - pos, &count, 1000);
-# 		if ((err != 0) && (err != LIBUSB_ERROR_TIMEOUT)) {
-# 			fprintf(stderr, "Error %d (%s) during EP OUT command transfer\n", err, libusb_error_name(err));
-# 			return -1;
-# 		}
-# 		pos += count;
-# 	}
-
-# 	// Receive response
-# 	err = libusb_bulk_transfer(devh, 2 | LIBUSB_ENDPOINT_IN, buf, sizeof(buf), &count, 1000);
-# 	if (err != 0) {
-# 		fprintf(stderr, "Error %d (%s) during EP IN transfer\n", err, libusb_error_name(err));
-# 		return -1;
-# 	}
-
-# 	// Make sure tag matches the one we sent
-# 	if (buf[0] != tag_this) {
-# 		fprintf(stderr, "WARNING: Mismatched tag in response\n");
-# 	}
-
-# 	// Save status code and length
-# 	status = buf[2];
-# 	*len = buf[1] - 3;
-
-# 	// Copy the rest of the payload (if any)
-# 	if ((*len > 0) && (response != NULL)) {
-# 		memcpy(response, &buf[3], *len);
-# 	}
-
-# 	return status;
-# }
-
-    def get_firmware_version(self):
-        """Get firmware version"""
-        v = self.command(self.CMD_GET_FIRMWARE_VERSION)
-        return v
-
-
-# 	err = cm3_cmd(devh, CM3_CMD_GET_FIRMWARE_VERSION, NULL, &len, buf);
-# 	if (err == 0) {
-# 		*ver = 0;
-# 		for (int i=0; i<4; i++) {
-# 			*ver = (*ver << 8) + buf[i];
-# 		}
-# 	}
-
-# 	return err;
-# }
-
+    def send(self, cmd, num_read):
+        # address taken from results of print(dev):   ENDPOINT 0x8: Bulk OUT
+        result = self.dev.write(0x2, cmd, 100)
+        assert result == len(cmd)
+        # self.dev.write(0x2,cmd)
+        # address taken from results of print(dev):   ENDPOINT 0x81: Bulk IN
+        result = self.dev.read(0x82,num_read,100)
+        return result
+    
 printers = usb.core.find(find_all=True, bDeviceClass=7)
 count = 0
 for printer in printers:
@@ -119,13 +110,12 @@ for device in devices:
     print(device)
     count += 1
 print(f'There are {count} devices  in the system')
-dev = usb.core.find(idVendor=0x085c, idProduct=0x0007)
-if dev is None:
-    print ('Our device is not connected')
-else:
-    print(f"Wahhay device is connected \n{dev}")
-dc = DataColor(dev)
-dc.get_firmware_version()
-
+dc = DataColor(verbose=True)
+cmd = [0, 3, 4]
+result = dc.send(cmd,3)
+print("Returned ", end = "")
+for b in result:
+    print(f"{b} ", end = "")
+print("")
 
 print("Done this")

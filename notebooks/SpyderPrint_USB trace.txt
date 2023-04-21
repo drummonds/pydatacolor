@@ -1,0 +1,949 @@
+000000: PnP Event: Device Connected (UP), 2023-04-21 10:52:46.1902475 (1. Device: Spyder3Print SR Spectrocolorimeter)
+The USB device has just been connected to the system.
+000001: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:29.3723906 +43.1821413 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x3 bytes to the device
+ 00 03 04                                          ...
+000005: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:29.3968033 +0.0238673. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xe46ce670 (Endpoint Address: 0x82)
+Get 0x3 bytes from the device
+ 00 03 00                                          ...
+000006: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:29.3968805 +0.0000772 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x3 bytes to the device
+ 01 03 02                                          ...
+000009: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:29.3973310 +0.0001480. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xe46ce670 (Endpoint Address: 0x82)
+Get 0x7 bytes from the device
+ 01 07 00 00 00 00 01                              .......
+000010: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:29.3974373 +0.0001063 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x8 bytes to the device
+ 02 08 16 08 00 0B 00 02                           ........
+000013: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:29.3982212 +0.0005319. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xe46ce670 (Endpoint Address: 0x82)
+Get 0x5 bytes from the device
+ 02 05 00 03 68                                    ....h
+000014: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:29.3983173 +0.0000961 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x8 bytes to the device
+ 03 08 16 08 00 18 00 01                           ........
+000017: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:29.3990174 +0.0004743. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xe46ce670 (Endpoint Address: 0x82)
+Get 0x4 bytes from the device
+ 03 04 00 06                                       ....
+000018: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:29.3990763 +0.0000589 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x8 bytes to the device
+ 04 08 16 08 00 26 00 01                           .....&..
+000021: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:29.3997817 +0.0004724. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xe46ce670 (Endpoint Address: 0x82)
+Get 0x4 bytes from the device
+ 04 04 00 10                                       ....
+000022: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:29.3998390 +0.0000573 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x8 bytes to the device
+ 05 08 16 08 00 37 00 01                           .....7..
+000025: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:29.4005502 +0.0004898. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xe46ce670 (Endpoint Address: 0x82)
+Get 0x4 bytes from the device
+ 05 04 00 04                                       ....
+000026: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:29.4006238 +0.0000736 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x8 bytes to the device
+ 06 08 16 08 00 0D 00 04                           ........
+000029: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:29.4014569 +0.0007147. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xe46ce670 (Endpoint Address: 0x82)
+Get 0x7 bytes from the device
+ 06 07 00 00 03 C5 20                              .....Å 
+000030: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:29.4015099 +0.0000530 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x3 bytes to the device
+ 07 03 02                                          ...
+000033: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:29.4018265 +0.0002074. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xe46ce670 (Endpoint Address: 0x82)
+Get 0x7 bytes from the device
+ 07 07 00 00 00 00 01                              .......
+000034: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:29.4018864 +0.0000599 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x8 bytes to the device
+ 08 08 16 08 07 FC 00 04                           .....ü..
+000037: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:29.4027132 +0.0005052. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xe46ce670 (Endpoint Address: 0x82)
+Get 0x7 bytes from the device
+ 08 07 00 00 00 00 01                              .......
+000038: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:29.4027546 +0.0000414 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x3 bytes to the device
+ 09 03 22                                          .."
+000041: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:29.4029248 +0.0000760. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xe46ce670 (Endpoint Address: 0x82)
+Get 0x8 bytes from the device
+ 09 08 00 01 05 0A 0A 01                           ........
+000042: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:29.4029650 +0.0000402 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x8 bytes to the device
+ 0A 08 21 01 05 0A 0A 01                           ..!.....
+000045: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:29.4031400 +0.0000719. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xe46ce670 (Endpoint Address: 0x82)
+Get 0x3 bytes from the device
+ 0A 03 00                                          ...
+000046: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:29.4822729 +0.0791329. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000048: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:29.6071904 +0.1093988. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000050: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:29.7336235 +0.1105328. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000052: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:29.8591587 +0.1097100. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000054: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:29.9839848 +0.1096884. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000056: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:30.1082198 +0.1095084. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000058: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:30.2341310 +0.1108581. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000060: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:30.3601297 +0.1105972. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000062: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:30.4842396 +0.1088818. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000064: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:30.6082619 +0.1087737. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000066: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:30.7322754 +0.1092642. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000068: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:30.8565652 +0.1090197. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000070: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:30.9814145 +0.1089686. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000072: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:31.1063279 +0.1094661. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000074: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:31.2311287 +0.1090896. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000076: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:31.3562232 +0.1099238. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000078: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:31.4813019 +0.1098927. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000080: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:31.6085467 +0.1110758. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000082: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:31.7330145 +0.1091753. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000084: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:31.8573006 +0.1080901. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000086: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:31.9825587 +0.1094832. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000088: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:32.1064836 +0.1085086. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000090: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:32.2309143 +0.1084829. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000092: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:32.3527630 +0.1062730. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000094: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:32.4783664 +0.1097549. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000096: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:32.6022370 +0.1088864. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000098: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:32.7281008 +0.1107065. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000100: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:32.8526099 +0.1093200. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000102: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:32.9786415 +0.1105012. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000104: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:33.1022420 +0.1085166. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000106: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:33.2289603 +0.1110588. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000108: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:33.3520356 +0.1087984. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000110: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:33.4760489 +0.1080121. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000112: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:33.6021151 +0.1108899. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000114: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:33.7268350 +0.1090264. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000116: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:33.8525916 +0.1098627. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000118: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:33.9783750 +0.1101637. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000120: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:34.1034829 +0.1094267. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000122: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:34.2286303 +0.1095211. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000124: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:34.3527733 +0.1092364. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000126: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:34.4766969 +0.1084833. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000128: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:34.6010887 +0.1089176. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000130: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:34.7257763 +0.1091915. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000132: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:34.8510694 +0.1100003. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000134: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:34.9769216 +0.1098582. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000136: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:35.1034682 +0.1113793. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000138: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:35.2279957 +0.1091384. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000140: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:35.3519105 +0.1089508. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000142: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:35.4770808 +0.1094004. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000144: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:35.6027931 +0.1102948. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000146: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:35.7282126 +0.1097396. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000148: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:35.8533753 +0.1090179. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000150: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:35.9792968 +0.1103969. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000152: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:36.1048624 +0.1100142. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000154: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:36.2295435 +0.1088196. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000156: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:36.3527587 +0.1083845. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000158: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:36.4768850 +0.1089955. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000160: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:36.6018399 +0.1088861. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000162: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:36.7285104 +0.1110945. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000164: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:36.8538563 +0.1091824. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000166: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:36.9786321 +0.1092319. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000168: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:37.1038920 +0.1093435. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000170: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:37.2295477 +0.1100044. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000172: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:37.3553744 +0.1103243. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000174: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:37.4820585 +0.1111852. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000176: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:37.6077418 +0.1102659. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000178: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:37.7337280 +0.1103655. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000180: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:37.8587071 +0.1089762. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000182: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:37.9860653 +0.1117113. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000184: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:38.1128470 +0.1105991. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000186: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:38.2366186 +0.1079484. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000188: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:38.3625032 +0.1104195. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000190: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:38.4882300 +0.1094816. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000192: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:38.6117548 +0.1083323. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000194: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:38.7372972 +0.1106069. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000196: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:38.8616446 +0.1086486. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000198: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:38.9867581 +0.1096065. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000200: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:39.1132043 +0.1105534. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000202: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:39.2385866 +0.1109445. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000204: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:39.3645954 +0.1100259. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000206: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:39.4884600 +0.1083510. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000208: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:39.6130819 +0.1096533. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000210: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:39.7349463 +0.1063546. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000212: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:39.8580218 +0.1081862. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000214: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:39.9802197 +0.1067993. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000216: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:40.1023759 +0.1068946. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000218: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:40.2248407 +0.1075061. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000220: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:40.3479974 +0.1079249. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000222: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:40.4715429 +0.1083358. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000224: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:40.5927442 +0.1058358. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000226: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:40.7156607 +0.1078423. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000228: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:40.8373456 +0.1073104. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000230: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:40.9597817 +0.1075109. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000232: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:41.0811378 +0.1063472. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000234: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:41.2020348 +0.1060185. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000236: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:41.3245697 +0.1069549. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000238: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:41.4466245 +0.1070652. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000240: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:41.5690126 +0.1068883. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000242: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:41.6917645 +0.1081034. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000244: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:41.8139402 +0.1076420. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000246: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:41.9371359 +0.1075665. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000248: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:42.0597539 +0.1070330. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000250: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:42.1801206 +0.1054454. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000252: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:42.3024072 +0.1071618. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000254: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:42.4246729 +0.1067909. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000256: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:42.5471658 +0.1076321. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000258: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:42.6698358 +0.1076501. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000260: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:42.7919883 +0.1073908. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000262: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:42.9130179 +0.1061536. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000264: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:43.0345197 +0.1063775. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000266: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:43.1559723 +0.1061381. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000268: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:43.2779593 +0.1069328. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000270: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:43.3993277 +0.1065266. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000272: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:43.5222582 +0.1071762. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000274: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:43.6460987 +0.1079789. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000276: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:43.7685046 +0.1073059. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000278: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:43.8919605 +0.1082364. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000280: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:44.0131233 +0.1063962. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000280: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:44.0131233 +0.1063962. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000282: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:44.1376493 +0.1090995. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000284: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:44.2640690 +0.1113366. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000286: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:44.3889981 +0.1095494. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000288: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:44.5139848 +0.1096058. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000290: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:44.6402009 +0.1105724. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000292: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:44.7679286 +0.1123350. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000294: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:44.8910038 +0.1081317. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000296: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:45.0170165 +0.1098887. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000298: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:45.1430407 +0.1100638. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000300: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:45.2679722 +0.1095594. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000302: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:45.3930012 +0.1096186. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000304: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:45.5182852 +0.1096541. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000306: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:45.6431623 +0.1096345. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000308: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:45.7684536 +0.1101904. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000310: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:45.8921856 +0.1083610. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000312: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:46.0170791 +0.1091283. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000314: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:46.1422221 +0.1091267. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000316: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:46.2680079 +0.1099420. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000318: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:46.3939117 +0.1099084. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000320: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:46.5171914 +0.1077502. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000322: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:46.6420978 +0.1088737. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000324: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:46.7673483 +0.1100996. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000326: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:46.8924559 +0.1093940. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000328: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:47.0187985 +0.1108208. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000330: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:47.1442674 +0.1103300. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000332: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:47.2688857 +0.1086592. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000334: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:47.3962164 +0.1113174. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000336: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:47.5222256 +0.1109543. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000338: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:47.6469231 +0.1095448. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000340: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:47.7719630 +0.1097574. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000342: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:47.8965450 +0.1094599. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000344: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:48.0210466 +0.1091503. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000346: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:48.1445056 +0.1077221. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000348: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:48.2707874 +0.1100459. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000350: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:48.3958221 +0.1099254. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000352: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:48.5221763 +0.1112557. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000354: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:48.6478185 +0.1099252. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000356: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:48.7709061 +0.1079555. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000358: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:48.8942943 +0.1077120. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000360: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:49.0192636 +0.1093406. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000362: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:49.1442551 +0.1094455. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000364: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:49.2685730 +0.1086305. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000366: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:49.3938809 +0.1094522. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000368: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:49.5191547 +0.1096133. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000370: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:49.6439009 +0.1101745. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000372: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:49.7698369 +0.1098675. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000374: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:49.8942194 +0.1089966. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000376: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:50.0201465 +0.1105267. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000378: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:50.1469174 +0.1108890. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000380: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:50.2732898 +0.1108163. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000382: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:50.3988377 +0.1098028. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000384: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:50.5244660 +0.1096533. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000386: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:50.6484610 +0.1085219. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000388: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:50.7752193 +0.1111799. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000390: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:50.9011707 +0.1104695. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000392: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:51.0268891 +0.1101910. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000394: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:51.1531190 +0.1100379. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000396: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:51.2784628 +0.1102133. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000398: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:51.4059573 +0.1115564. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000400: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:51.5295857 +0.1079859. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000402: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:51.6550626 +0.1098349. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000404: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:51.7810547 +0.1102188. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000406: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:51.9067443 +0.1102834. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000408: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:52.0323832 +0.1104569. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000410: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:52.1561838 +0.1081415. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000412: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:52.2822396 +0.1102013. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000414: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:52.4089761 +0.1116254. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000416: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:52.4471066 +0.0222322. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x1 bytes from the device
+ FA                                                ú
+000418: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:52.4688091 +0.0214749 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x8 bytes to the device
+ 0B 08 17 08 00 11 00 02                           ........
+000420: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:52.4689226 +0.0000212 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x2 bytes to the device
+ 10 10                                             ..
+000423: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:52.4738674 +0.0048574. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xe46ce670 (Endpoint Address: 0x82)
+Get 0x3 bytes from the device
+ 0B 03 00                                          ...
+000424: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:52.4738843 +0.0000169 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x3 bytes to the device
+ 0C 03 04                                          ...
+000427: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:52.5017418 +0.0277263. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xe46ce670 (Endpoint Address: 0x82)
+Get 0x3 bytes from the device
+ 0C 03 00                                          ...
+000428: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:52.5484591 +0.0467173 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x8 bytes to the device
+ 0D 08 16 08 03 33 00 01                           .....3..
+000431: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:52.5491701 +0.0005771. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xe46ce670 (Endpoint Address: 0x82)
+Get 0x4 bytes from the device
+ 0D 04 00 10                                       ....
+000432: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:52.5491915 +0.0000214 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x3 bytes to the device
+ 0E 03 0A                                          ...
+000435: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:52.5498300 +0.0004887. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000437: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:52.6093378 +0.0442160. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xe46ce670 (Endpoint Address: 0x82)
+Get 0x8 bytes from the device
+ 0E 0F 00 00 66 EC C4 00                           ....fìÄ.
+000439: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:52.6095006 +0.0000808. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xe46ce670 (Endpoint Address: 0x82)
+Get 0x7 bytes from the device
+ 00 09 C4 FF FC E3 E8                              ..Äÿüãè
+000440: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:52.6753561 +0.0658555. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000442: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:52.6910229 +0.0002463 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x4 bytes to the device
+ 0F 04 12 00                                       ....
+000445: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:52.7962819 +0.1051112. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xe46ce670 (Endpoint Address: 0x82)
+Get 0x3 bytes from the device
+ 0F 03 00                                          ...
+000446: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:52.7963991 +0.0001172 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x8 bytes to the device
+ 10 08 16 08 00 F0 00 01                           .....ð..
+000449: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:52.8006301 +0.0040193. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xe46ce670 (Endpoint Address: 0x82)
+Get 0x4 bytes from the device
+ 10 04 00 02                                       ....
+000450: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:52.8010584 +0.0004283 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x8 bytes to the device
+ 11 08 16 08 00 F1 00 04                           .....ñ..
+000451: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:52.8010959 +0.0000375. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000454: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:52.8018638 +0.0006820. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xe46ce670 (Endpoint Address: 0x82)
+Get 0x7 bytes from the device
+ 11 07 00 00 08 00 F9                              ......ù
+000455: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:52.8019860 +0.0001222 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x8 bytes to the device
+ 12 08 17 08 03 2F 00 04                           ...../..
+000457: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:52.8021676 +0.0000858 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x4 bytes to the device
+ 00 08 00 F9                                       ...ù
+000460: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:52.8157334 +0.0133997. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xe46ce670 (Endpoint Address: 0x82)
+Get 0x3 bytes from the device
+ 12 03 00                                          ...
+000461: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:52.8158687 +0.0001353 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x8 bytes to the device
+ 13 08 17 08 03 33 00 01                           .....3..
+000463: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:52.8161182 +0.0001062 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x1 bytes to the device
+ 10                                                .
+000467: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:52.8200107 +0.0032836. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xe46ce670 (Endpoint Address: 0x82)
+Get 0x3 bytes from the device
+ 13 03 00                                          ...
+000468: Bulk or Interrupt Transfer (DOWN), 2023-04-21 10:53:52.8200459 +0.0000352 (1. Device: Spyder3Print SR Spectrocolorimeter)
+Pipe Handle: 0xec5d18f0 (Endpoint Address: 0x2)
+Send 0x3 bytes to the device
+ 14 03 04                                          ...
+000471: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:52.8479644 +0.0277253. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0x00000000
+Pipe Handle: 0xe46ce670 (Endpoint Address: 0x82)
+Get 0x3 bytes from the device
+ 14 03 00                                          ...
+000472: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:52.9252111 +0.0772467. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000474: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:53.0525002 +0.1117256. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000476: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:53.1791511 +0.1108225. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000478: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:53.3047464 +0.1097904. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000480: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:53.4311968 +0.1102563. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000482: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:53.5563424 +0.1094915. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000484: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:53.6813440 +0.1096790. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000486: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:53.8066928 +0.1097164. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000488: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:53.9311024 +0.1090832. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000490: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:54.0542466 +0.1078481. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000492: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:54.1789957 +0.1094149. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000494: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:54.3034985 +0.1088681. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000496: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:54.4299533 +0.1107733. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000498: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:54.5548216 +0.1096806. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000500: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:54.6768811 +0.1061376. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000502: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:54.7990069 +0.1070249. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000504: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:54.9218633 +0.1075559. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000506: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:55.0441848 +0.1067569. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000508: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:55.1683536 +0.1085573. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000510: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:55.2935517 +0.1098905. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000512: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:55.4170120 +0.1081488. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000514: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:55.5410007 +0.1088179. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000516: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:55.6645017 +0.1085051. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000518: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:55.7881327 +0.1075852. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000520: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:55.9109225 +0.1073216. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000522: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:56.0316377 +0.1055426. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000524: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:56.1531739 +0.1061712. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000526: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:56.2763129 +0.1083944. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000528: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:56.3990429 +0.1073134. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000530: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:56.5206689 +0.1064654. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000532: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:56.6436657 +0.1074162. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000534: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:56.7667951 +0.1075522. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000536: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:56.8874456 +0.1054700. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000538: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:57.0083543 +0.1056247. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000540: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:57.1319006 +0.1081194. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000542: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:57.2528854 +0.1055308. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000544: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:57.3754929 +0.1074717. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000546: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:57.4978240 +0.1069874. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000548: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:57.6200553 +0.1072316. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000550: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:57.7418981 +0.1067453. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000552: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:57.8627664 +0.1060333. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000554: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:57.9843776 +0.1068724. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000556: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:58.1060041 +0.1061778. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000558: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:58.2280542 +0.1070543. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000560: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:58.3512061 +0.1081722. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000562: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:58.4740989 +0.1072427. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000564: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:58.5975495 +0.1087985. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000566: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:58.7192523 +0.1067165. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000568: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:58.8398650 +0.1055486. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000570: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:58.9611122 +0.1060135. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000572: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:59.0830434 +0.1066252. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000574: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:59.2065092 +0.1080834. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000576: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:59.3319906 +0.1103914. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000578: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:59.4566884 +0.1092524. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000580: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:59.5799623 +0.1081992. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000582: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:59.7062630 +0.1102696. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000584: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:59.8321812 +0.1101493. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000586: Bulk or Interrupt Transfer (UP), 2023-04-21 10:53:59.9554624 +0.1077643. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000588: Bulk or Interrupt Transfer (UP), 2023-04-21 10:54:00.0808064 +0.1099628. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000590: Bulk or Interrupt Transfer (UP), 2023-04-21 10:54:00.2045836 +0.1082864. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000592: Bulk or Interrupt Transfer (UP), 2023-04-21 10:54:00.3291517 +0.1081490. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000594: Bulk or Interrupt Transfer (UP), 2023-04-21 10:54:00.4542784 +0.1098356. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000596: Bulk or Interrupt Transfer (UP), 2023-04-21 10:54:00.5808794 +0.1100686. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device
+000598: Bulk or Interrupt Transfer (UP), 2023-04-21 10:54:00.7070219 +0.1106270. (1. Device: Spyder3Print SR Spectrocolorimeter) Status: 0xc0010000
+Pipe Handle: 0xda32b7a0 (Endpoint Address: 0x81)
+Get 0x0 bytes from the device

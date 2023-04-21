@@ -11,6 +11,10 @@ pyusb = "^1.2.1"
 libusb = "^1.0.26b5"
 
 
+[tool.poetry.group.dev.dependencies]
+jupyterlab = "^3.6.3"
+black = "^23.3.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
