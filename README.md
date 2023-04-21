@@ -1,5 +1,5 @@
 # pydatacolor
-Using Python to connect to Datacolor spyder print spectrocolorimeter
+Using Python to connect to Datacolor Spyder Print spectrocolorimeter, SpyderPRINT™
 
 I have made contact but now need to start reading from it.
 
@@ -28,6 +28,27 @@ This has broken SpyderPrint which only works with its own driver.
 My code didn't work return pipe errors but unplugging and replugging got my test code test1.py to work.
 
 
+I think there is a 16 character buffer on reading.  If you don't read all the data then this buffer wil fill up and if it gets to the limit a USB Pipe error is created.
+
+Thre is still a lot of magic in this see test3.py.
+
+Commands:
+- 00x
+- 01x
+- 02x
+- 03x
+- 04x
+- 05x
+- 06x: Get serial number
+- 07x
+- 08x
+- 09x
+- 0Ax  Measure?
+- 0Bx
+- 0Cx  Calibrate?
+- 0Dx
+- 0Ex
+- 0Fx
 
 
 
