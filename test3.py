@@ -1,3 +1,4 @@
+import struct 
 from time import sleep
 import usb.core
 from usb.core import USBTimeoutError
@@ -72,6 +73,21 @@ DEVICE ID 085c:0007 on Bus 001 Address 008 =================
        wMaxPacketSize   :    0x8 (8 bytes)
        bInterval        :    0x0
 
+
+/// Calibration modes
+typedef enum {
+	CM3_CAL_WHITE					= 0,		///< Calibrate from white tile
+	CM3_CAL_BLACK					= 1			///< Calibrate from black tile (not used)
+} CM3_CAL_TYPE;
+       
+Measurement is either xyz or lab but so requires to be calibrated first
+as not sure how to get raw data.
+    typedef struct {
+	char mode;
+	float x,y,z;
+	float l,a,b;
+} CM3_MEASUREMENT;
+
     """
 
     def __init__(self, idVendor=0x085c, idProduct=0x0007, verbose=False):
@@ -117,6 +133,20 @@ DEVICE ID 085c:0007 on Bus 001 Address 008 =================
         result = dc.send([self.CMD_MEASURE],15)
         return result
     
+    def measure_report(self):
+        result = dc.send([self.CMD_MEASURE],15)
+        data = struct.unpack("!BBBIII", result)
+        assert data[0] == data[0]
+        print(f"Measurement  {data[2]:02x} l:{data[3]} a:{data[4]} b:{data[5]}")
+        s = 4294967295.0
+        print(f"             {data[2]:02x} l:{data[3]/s} a:{data[4]/s} b:{data[5]/s}")
+    
+    
+    def get_int32(self, cmd):
+        result = self.send([0x06,0x08,0x16,0x08,0x00,0x0D,0x00,0x04],7)
+        serial_num = result[3]*16777216 + result[4]*65536 + result[5]*256 + result[6]   
+        return serial_num
+
     def get_serial_number(self):
         result = self.send([0x06,0x08,0x16,0x08,0x00,0x0D,0x00,0x04],7)
         serial_num = result[3]*16777216 + result[4]*65536 + result[5]*256 + result[6]   
@@ -141,10 +171,13 @@ show_result(f"  Check empty", dc.read(1,timeout=1000, timeout_ok=True))
 for i in range(2):
     result = dc.measure()
     show_result(f"Measured {i}", result)
-    show_result(f"  Check empty", dc.read(1,timeout=1000, timeout_ok=True))
-    sleep(2)
+    show_result(f"  Check empty", dc.read(1,timeout=100, timeout_ok=True))
+    sleep(0.2)
+for i in range(2):
+    dc.measure_report()
+    sleep(0.5)
 for i in range(3):
-    result = dc.read(1,timeout=1000, timeout_ok=True)
+    result = dc.read(1,timeout=100, timeout_ok=True)
     show_result(f"Read {i}", result)
 
 print("Done this")

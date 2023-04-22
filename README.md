@@ -43,13 +43,22 @@ Commands:
 - 07x
 - 08x
 - 09x
-- 0Ax  Measure?
+- 0Ax  Measure > val
 - 0Bx
 - 0Cx  Calibrate?
 - 0Dx
 - 0Ex
 - 0Fx
 
+Protocol
+Ints are return unsigned in network big endian
+
+Uses Bulk 
+Bulk out = n Chars
+Char 0 is command
+Bulk In 
+Char 0 echos command
+Char 1 is number of bytes returned
 
 
 
