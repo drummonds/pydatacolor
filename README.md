@@ -60,6 +60,27 @@ Bulk In
 Char 0 echos command
 Char 1 is number of bytes returned
 
+## Led illumination
+
+The [Northlight review](https://www.northlight-images.co.uk/spyder3print-sr-spyderprint-review/) has a great image of the [LEDs on paper](https://www.northlight-images.co.uk/content_images_2/spyder3print_sr/sensor-light.jpg).
+
+This encouraged me and I have tried to get an image. I installed ip webcam on my phone and used testcam.py to get delayed images. By adjuting the delay I can get pictures as the LEDS light up. With a bit of random trial and error I got this:
+
+![LED Measurements](MeasurementLEDS.jpg)
+
+If you have the paper closer the individual LEDS overlap it looks like white light:
+
+![White light when combined](CombinedLEDSWhite.jpg)
+
+
+The Spyder uses 4? LED's of different colours to make measurements:
+- Red
+- Orange
+- Green
+- Blue
+
+During the calibration it measures each one individually.  During the measurment run it appears to use them all together.
+
 
 
 
