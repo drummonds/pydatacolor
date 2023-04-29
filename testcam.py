@@ -16,4 +16,3 @@ for i in range(10):
     resp = http.request("GET", url)
     with open(f"test{i:2d}.jpg","wb") as f:
         f.write(resp.data)
-    sleep(0.1)

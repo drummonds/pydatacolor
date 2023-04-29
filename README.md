@@ -72,12 +72,16 @@ If you have the paper closer the individual LEDS overlap it looks like white lig
 
 ![White light when combined](CombinedLEDSWhite.jpg)
 
+The squencing can be seen here:
+![Sequence1](sequential.jpg) ![Sequence2](sequential2.jpg)
 
-The Spyder uses 4? LED's of different colours to make measurements:
+The Spyder uses 6 LED's of different colours to make measurements:
 - Red
 - Orange
-- Green
-- Blue
+- Green 1
+- Green 2
+- Blue 1
+- Blue 2
 
 During the calibration it measures each one individually.  During the measurment run it appears to use them all together.
 
