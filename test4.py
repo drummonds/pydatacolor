@@ -1,3 +1,4 @@
+import numpy as np
 import struct 
 from subprocess import Popen
 from time import sleep
@@ -82,7 +83,8 @@ typedef enum {
 } CM3_CAL_TYPE;
        
 Measurement is either xyz or lab but so requires to be calibrated first
-as not sure how to get raw data.
+as not sure how to get raw data.  Starting to think that colorimeter only
+gives back raw data per LED, so 6 16bit
     typedef struct {
 	char mode;
 	float x,y,z;
@@ -100,6 +102,7 @@ as not sure how to get raw data.
         self.CMD_READ_MEMORY          = 0x16  # Read from CM3 memory
         self.CMD_WRITE_MEMORY         = 0x17  # Write to CM3 memory
         self.EP_BULK_OUT = 0x02
+        self.EP_INTERRUPT_IN  = 0x81
         self.EP_BULK_IN  = 0x82
         self.dev = usb.core.find(idVendor=idVendor, idProduct=idProduct)
         # set_configuration not implemented
@@ -158,6 +161,20 @@ as not sure how to get raw data.
             else:
                 raise e
 
+    def interrupt_get(self, cmd: bytes, timeout=100, expect_read_num = 1, timeout_reads = 1000):
+        # Uses same bulk out entpoint for sending but pattern afterwards
+        # is different
+        result_cmd = self.dev.write(self.EP_BULK_OUT, list(cmd), timeout)
+        assert result_cmd == len(cmd)
+        count = 0
+        while count < timeout_reads:
+            try:
+                result_1 = self.dev.read(self.EP_INTERRUPT_IN,expect_read_num,timeout)
+                return result_1
+            except USBTimeoutError as e:
+                pass
+        return []
+
     def measure(self):
         result = dc.send([self.CMD_MEASURE], timeout=200)
         return result
@@ -165,13 +182,33 @@ as not sure how to get raw data.
     def measure_report(self):
         result = dc.send([self.CMD_MEASURE])
         if len(result)  == 13:
-            data = struct.unpack("!BIII", result)
-            print(f"Measurement  {data[0]:02x} l:{data[1]} a:{data[2]} b:{data[3]}")
-            s = 4294967295.0
-            print(f"             {data[0]:02x} l:{data[1]/s} a:{data[2]/s} b:{data[3]/s}")
+            data = struct.unpack("!BHHHHHH", result)
+            print(f"Measurement  {data[0]:02x} B1:{data[1]} B2:{data[2]} G1:{data[3]} G2:{data[4]} O:{data[5]} R:{data[6]}")
+            # s = 4294967295.0
+            s = 65535.0
+            # print(f"             B1:{data[1]/s:0.5f} B2:{data[2]/s:0.5f} G1:{data[3]/s:0.5f} G2:{data[4]/s:0.5f} O:{data[5]/s:0.5f} R:{data[6]/s:0.5f}")
         else:
             print(result)
     
+    def measure_report_array(self, num_repeats):
+        summary =  np.zeros(shape=(4, num_repeats))
+        for n in range(num_repeats):
+            result = dc.send([self.CMD_MEASURE])
+            if len(result)  == 13:
+                data = struct.unpack("!Blll", result)
+                for i in range(4):
+                    summary[i, n] = data[i]/65536
+            else:
+                print(f" Error result in measure report array {result}")
+        print(f"Measurement  xx       L      a*       b*")
+        print("       ",end="")
+        for i in range(4):
+            print(f"{np.average(summary[i]):8.1f} ", end = "")
+        print()
+        print("       ",end="")
+        for i in range(4):
+            print(f"{np.std(summary[i]):8.3f} ", end = "")
+        print()
     
     def get_int32(self, cmd):
         result = self.send([0x06,0x08,0x16,0x08,0x00,0x0D,0x00,0x04],7)
@@ -183,14 +220,17 @@ as not sure how to get raw data.
         serial_num = result[3]*16777216 + result[4]*65536 + result[5]*256 + result[6]   
         return serial_num
     
-    def check(self,cmd,expected_result,comment):
-        r = self.send(cmd)
+    def check_result(self,r,expected_result,comment, timeout=100):
         if list(r) != expected_result:
             print(f"Datacolour checking {cmd} got {r} expected {expected_result} : {comment}")
         assert list(r) == expected_result
         return r
-        
-    
+
+    def check(self,cmd,expected_result,comment, timeout=100):
+        r = self.send(cmd, timeout=timeout)
+        self.check_result(r,expected_result,comment, timeout=100)
+        return r
+            
     def reset(self):
         self.drain()
         self.drain()
@@ -212,20 +252,61 @@ as not sure how to get raw data.
         # This then sees to start a polling loop
         # self.check([], [],"?")
 
-    def calibrate(self):
-        # Have problems with next two
+    def wait_for_button_press(self):
+        r = self.interrupt_get([0x0A,3,0])
+        print(f"Result from button press is {r}")
+
+    def calibrate_send(self, cmd, cmd2, timeout=100, timeout_ok=False):
+        """This is a non standard bulk command with 
+         - a normal bulk command
+        - an extra bulk input
+        - a normal bulk input for first command """
         # self.check([0x0B, 8, 0x17, 8, 0, 0x11, 0, 2], [],"Calib ?")
         # self.check([0x10, 0x10], [0],"Calib ?")
+        result_cmd = self.dev.write(self.EP_BULK_OUT, list(cmd), timeout)
+        assert result_cmd == len(cmd)
+        result_2 = self.dev.write(self.EP_BULK_OUT, list(cmd2), timeout)
+        assert result_2 == len(cmd2)
+        try:
+            result_1 = self.dev.read(self.EP_BULK_IN,2,timeout)
+            assert cmd[0] == result_1[0]  # Echos command
+            num_read = result_1[1]
+            num_to_read = num_read -2
+            result_2 = self.dev.read(self.EP_BULK_IN,num_read,timeout)
+            if len(result_2) != num_to_read:
+                # If timed out try once more
+                result_2 += self.dev.read(self.EP_BULK_IN,num_read-len(result),timeout)
+            return result_2
+        except USBTimeoutError as e:
+            if timeout_ok:
+                return []
+            else:
+                raise e
+
+    def calibrate(self):
+        # Have problems with next two
+        self.check_result(
+            self.calibrate_send([0x0B, 8, 0x17, 8, 0, 0x11, 0, 2], [0x10, 0x10]),
+            [0],
+            "Calib E non standard?")
         self.check([0x0C, 3, 4], [0],"Calib C ?")
-        self.check([0x0D, 8, 0x16, 8, 3, 0x33, 0, 1], [0, 0x10],"Calib C ?")
+        self.check([0x0D, 8, 0x16, 8, 3, 0x33, 0, 1], [0, 0x10],"Calib D ?")
         # E actually gets data as the response is variable
         r = self.send([0x0E, 3, 0x0A])
         print(f"E Calibration data = {r}")
         # self.check([0x0E, 3, 0x0A], [0,0,0x66, 0xEC, 0xC4, 0,0,9,0xC4,0xFF, 0xFC, 0xE3, 0xE8],"Calib E ?")
-        self.check([0x0F, 4, 0x12, 0], [0],"Calib F ?")
+        self.check([0x0F, 4, 0x12, 0], [0],"Calib F ?", timeout=1000)
         # in test got 0,2
-        self.check([0x10, 8, 0x16, 8,0, 0xF0,0,0], [0],"Calib 10 ?")
-        # ...
+        self.check([0x10, 8, 0x16, 8,0, 0xF0,0,0], [0],"Calib 10 orig got 0,2 ?") 
+        self.check([0x11, 8, 0x16, 8,0, 0xF1,0,4], [0,0, 8, 0, 0xF9],"Calib 11 ?") 
+        self.check_result(
+            self.calibrate_send([0x12, 8, 0x17, 8,3, 0x2F,0,4], [0,8,0,0xF9]),
+            [0],
+            "Calib 12 non standard?")
+        self.check_result(
+            self.calibrate_send([0x13, 8, 0x17, 8,3, 0x33,0,1], [0x10]),
+            [0],
+            "Calib 13 non standard?")
         self.check([0x14, 3, 4], [0],"Calib 14 ?")
 
 
@@ -240,14 +321,17 @@ dc.reset()
 print(f"Serial number = {dc.serial_nuber}")
             
 dc.drain(verbose=True)
-pid = Popen(["poetry", "run", "python", "testcam.py"]).pid
-sleep(2)  # Try to align first meausurement snap  after 1 sec 
-print(f"Started webcam snap {pid}", flush=True)
-print("="*80 + "\n  Calibration", flush=True)
+# The following was to synchronise and try get pictures
+# if not camera will just fail silently
+# pid = Popen(["poetry", "run", "python", "testcam.py"]).pid
+# sleep(2)  # Try to align first meausurement snap  after 1 sec 
+# print(f"Started webcam snap {pid}", flush=True)
+print("="*80 + "\n  Calibration  Press button on continue", flush=True)
+dc.wait_for_button_press()
 dc.calibrate()
-print("="*80 + "\n  Measurement", flush=True)
-for i in range(4):
-    dc.measure_report()
-    sleep(1)
+print("="*80 + "\n  Measurement press button to continue", flush=True)
+for i in range(26):
+    dc.wait_for_button_press()
+    dc.measure_report_array(100)
 
 print("Done this", flush=True)

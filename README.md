@@ -83,9 +83,18 @@ The Spyder uses 6 LED's of different colours to make measurements:
 - Blue 1
 - Blue 2
 
-During the calibration it measures each one individually.  During the measurment run it appears to use them all together.
+During the calibration it measures each one individually.  During the measurment run it appears to use them one after another.  The persistence in the human eye seems longer than that of the WebCam exposure but it must be done each measurment in about 10 milliseconds.
+
+## Nearing success
 
 
+Here is my first SpyderCheckr.  It is not very good and shows clipping probles.
+
+I am using the raw LAB data from the Printer.  It shows that that calibration must be done in the host software.  The data was hand crafted into a checkr forat as sRGB.  Becuase the calibration is off you can see clipping and some of the colours are out of SRGB gamut.
+
+However that it is a solveable problem!
+
+![SpyderChekr 24](images/FirstSpyderChecker.png)
 
 
 

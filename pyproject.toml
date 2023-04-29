@@ -15,6 +15,10 @@ libusb = "^1.0.26b5"
 jupyterlab = "^3.6.3"
 black = "^23.3.0"
 scipy = "^1.10.1"
+matplotlib = "^3.7.1"
+colour-science = "^0.4.2"
+pandas = "^2.0.1"
+drawsvg = "^2.1.1"
 
 [build-system]
 requires = ["poetry-core"]
