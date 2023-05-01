@@ -9,6 +9,7 @@ readme = "README.md"
 python = ">=3.10,<3.12"
 pyusb = "^1.2.1"
 libusb = "^1.0.26b5"
+textual = "^0.22.3"
 
 
 [tool.poetry.group.dev.dependencies]
