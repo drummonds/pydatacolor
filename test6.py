@@ -4,7 +4,7 @@ test4 but using the local library.
 """
 
 import numpy as np
-import struct 
+import struct
 from subprocess import Popen
 from time import sleep
 import usb.core
@@ -12,55 +12,87 @@ from usb.core import USBTimeoutError
 
 from pydatacolor import DataColor
 
-
-dev = usb.core.find()
-"""Aim to improve test.py to take a measurement precursor to createing a modulegit"""
-
+"""Aim to really simple measurement app"""
 
 
 from textual.app import App, ComposeResult
-from textual.widgets import Static
+from textual.containers import ScrollableContainer
+from textual.widgets import Button, Footer, Header, Static
 
 
-class PrideApp(App):
-    """Displays a pride flag."""
+class ColourDisplay(Static):
+    """A widget to display a measured colour."""
 
-    COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
+
+class Calibrate(Static):
+    """A colour measurement widget."""
+
+    def on_button_pressed(self, event: Button.Pressed) -> None:
+        """Event handler called when a button is pressed."""
+        if event.button.id == "calibrate":
+            if "started" in self.classes:
+                self.remove_class("started")
+            else:
+                self.app.add_colourimeter()
+                if self.app.dc:
+                    r = self.get_child_by_id("calibresult")
+                    tile = self.app.dc.calibration_and_measure()
+                    r.update(f"White = {tile} SN = {self.app.dc.get_serial_number()}")
+                    self.add_class("started")
 
     def compose(self) -> ComposeResult:
-        for color in self.COLORS:
-            stripe = Static()
-            stripe.styles.height = "1fr"
-            stripe.styles.background = color
-            yield stripe
+        """Create child widgets of a stopwatch."""
+        yield Button("Calibrate", id="calibrate", variant="success")
+        yield ColourDisplay("#FF0000", id="calibresult")
+
+
+class Measurement(Static):
+    """A colour measurement widget."""
+
+    def on_button_pressed(self, event: Button.Pressed) -> None:
+        """Event handler called when a button is pressed."""
+        if event.button.id == "measure":
+            if "started" in self.classes:
+                self.remove_class("started")
+            else:
+                if self.app.dc:
+                    r = self.get_child_by_id("result")
+                    tile = self.app.dc.measure_array_n(100)
+                    r.update(f"L*ab = {tile}")
+                    self.add_class("started")
+
+    def compose(self) -> ComposeResult:
+        """Create child widgets of a stopwatch."""
+        yield Button("Measure", id="measure", variant="success")
+        yield ColourDisplay("#FFEFDF",id="result")
+
+
+class Measurer(App):
+    """A Textual app to calibrate and make measurements with a Datacolor Colorimeter."""
+
+    CSS_PATH = "test6.css"
+    BINDINGS = [("q", "quit", "Quit the app"), ("d", "toggle_dark", "Toggle dark mode")]
+
+    def compose(self) -> ComposeResult:
+        """Create child widgets for the app."""
+        yield Header()
+        yield ScrollableContainer(Calibrate(), Measurement(), Measurement())
+        yield Footer()
+
+    def action_toggle_dark(self) -> None:
+        """An action to toggle dark mode."""
+        self.dark = not self.dark
+
+    def add_colourimeter(self):
+        self.dev = usb.core.find()
+        self.dc = DataColor(verbose=False)
+        if self.dc:
+            self.dc.reset()
+            # print(f"Serial number = {dc.serial_nuber}")
+
+            self.dc.drain(verbose=False)
 
 
 if __name__ == "__main__":
-    PrideApp().run()
-
-
-def show_result(name, result, suffix = ""):
-    print(f"{name:40} ", end = "")
-    for b in result:
-        print(f"{b:02X} ", end = "")
-    print(" " + suffix)
-    
-dc = DataColor(verbose=False)
-dc.reset()
-print(f"Serial number = {dc.serial_nuber}")
-            
-dc.drain(verbose=True)
-# The following was to synchronise and try get pictures
-# if not camera will just fail silently
-# pid = Popen(["poetry", "run", "python", "testcam.py"]).pid
-# sleep(2)  # Try to align first meausurement snap  after 1 sec 
-# print(f"Started webcam snap {pid}", flush=True)
-print("="*80 + "\n  Calibration  Press button on continue", flush=True)
-dc.wait_for_button_press()
-dc.calibrate()
-print("="*80 + "\n  Measurement press button to continue", flush=True)
-for i in range(26):
-    dc.wait_for_button_press()
-    dc.measure_report_array(100)
-
-print("Done this", flush=True)
+    app = Measurer()
+    app.run()

@@ -186,7 +186,7 @@ gives back raw data per LED, so 6 16bit
         else:
             print(result)
     
-    def measure_report_array(self, num_repeats):
+    def measure_array_raw(self, num_repeats):
         summary =  np.zeros(shape=(4, num_repeats))
         for n in range(num_repeats):
             result = self.send([self.CMD_MEASURE])
@@ -196,6 +196,16 @@ gives back raw data per LED, so 6 16bit
                     summary[i, n] = data[i]/65536
             else:
                 print(f" Error result in measure report array {result}")
+        return summary
+    
+    def measure_array_n(self, num_repeats):
+        "returns raw LAB values"
+        summary =  self.measure_array_raw(num_repeats)
+        result = [np.average(summary[1]),np.average(summary[2]),np.average(summary[3])]
+        return result
+
+    def measure_report_array(self, num_repeats):
+        summary =  self.measure_array_raw()
         print(f"Measurement  xx       L      a*       b*")
         print("       ",end="")
         for i in range(4):
@@ -304,3 +314,8 @@ gives back raw data per LED, so 6 16bit
             [0],
             "Calib 13 non standard?")
         self.check([0x14, 3, 4], [0],"Calib 14 ?")
+
+    def calibration_and_measure(self, num_repeats =100):
+        self.calibrate()
+        self.white_tile = self.measure_array_n(num_repeats)
+        return self.white_tile

@@ -1,0 +1,61 @@
+Measurement {
+    layout: horizontal;
+    background: $boost;
+    height: 5;
+    margin: 1;
+    min-width: 50;
+    padding: 1;
+}
+
+Calibrate {
+    layout: horizontal;
+    background: $boost;
+    height: 5;
+    margin: 1;
+    min-width: 50;
+    padding: 1;
+}
+
+ColourDisplay {
+    content-align: center middle;
+    text-opacity: 20%;
+    height: 3;
+    background: greenyellow;
+}
+
+Button {
+    width: 16;
+}
+
+#measure {
+    dock: left;
+}
+
+#stop {
+    dock: left;
+    display: none;
+}
+
+#calibrate {
+    dock: left;
+    background: aquamarine;
+}
+
+.started {
+    text-style: bold;
+    background: $success;
+    color: $text;
+}
+
+.started ColourDisplay {
+    text-opacity: 100%;
+}
+
+.started #start {
+    display: none
+}
+
+.started #stop {
+    display: block
+}
+
