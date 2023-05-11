@@ -1,0 +1,10 @@
+{{out_of_band|safe}}
+{% if connect_state == "start" %}
+<button hx-post="/connect" hx-swap="outerHTML" class="button is-success">Connect 2</button>
+{% elif connect_state == "run" %}
+<button hx-post="/connect" hx-swap="outerHTML" hx-trigger="every 5s" class="button is-danger">Cancel</button>
+{% elif connect_state == "end" %}
+<button hx-post="/connect" hx-swap="outerHTML" class="button is-success">Connect 3</button>
+{% else %}
+<button hx-post="/connect" hx-swap="outerHTML" class="button is-info">{{connect_state}}???</button>
+{% endif %}

@@ -1,7 +1,5 @@
 import numpy as np
 import struct 
-from subprocess import Popen
-from time import sleep
 import usb.core
 from usb.core import USBTimeoutError
 
@@ -91,6 +89,7 @@ gives back raw data per LED, so 6 16bit
 
     def __init__(self, idVendor=0x085c, idProduct=0x0007, verbose=False):
         """dev is usb.core find instance"""
+        self._print = print
         self.CMD_GET_FIRMWARE_VERSION = 0x02  # Get firmware version (returns 4 bytes)
         self.CMD_SOFT_RESET           = 0x04  # Soft reset (returns nothing)
         self.CMD_MEASURE              = 0x0A  # Measure
@@ -106,10 +105,10 @@ gives back raw data per LED, so 6 16bit
             self.dev.set_configuration()
         if verbose:
             if self.dev is None:
-                print ('Our device is not connected')
+                self._print('Our device is not connected')
                 raise Exception("No device connected")
             else:
-                print(f"Wahhay device is connected \n{self.dev}")
+                self._print(f"Wahhay device is connected \n{self.dev}")
                 pass
 
 
@@ -127,18 +126,18 @@ gives back raw data per LED, so 6 16bit
         """Drain the input buffer use when state is unknown"""
         result = self.read(100, timeout=timeout, timeout_ok=True)
         if result != [] and verbose:
-            print(f" Drain got {result}")
+            self._print(f" Drain got {result}")
     
     def basic_send(self, cmd : bytes, num_read=None, timeout=100):
-        # address taken from results of print(dev):   ENDPOINT 0x8: Bulk OUT
+        # address taken from results of self._print(dev):   ENDPOINT 0x8: Bulk OUT
         result = self.dev.write(self.EP_BULK_OUT, list(cmd), timeout)
         assert result == len(cmd)
-        # address taken from results of print(dev):   ENDPOINT 0x81: Bulk IN
+        # address taken from results of self._print(dev):   ENDPOINT 0x81: Bulk IN
         result = self.dev.read(self.EP_BULK_IN,num_read,timeout)
         return result
     
     def send(self, cmd: bytes, timeout=100, timeout_ok=False):
-        # address taken from results of print(dev):   ENDPOINT 0x8: Bulk OUT
+        # address taken from results of self._print(dev):   ENDPOINT 0x8: Bulk OUT
         result_cmd = self.dev.write(self.EP_BULK_OUT, list(cmd), timeout)
         assert result_cmd == len(cmd)
         try:
@@ -179,12 +178,12 @@ gives back raw data per LED, so 6 16bit
         result = self.send([self.CMD_MEASURE])
         if len(result)  == 13:
             data = struct.unpack("!BHHHHHH", result)
-            print(f"Measurement  {data[0]:02x} B1:{data[1]} B2:{data[2]} G1:{data[3]} G2:{data[4]} O:{data[5]} R:{data[6]}")
+            self._print(f"Measurement  {data[0]:02x} B1:{data[1]} B2:{data[2]} G1:{data[3]} G2:{data[4]} O:{data[5]} R:{data[6]}")
             # s = 4294967295.0
             s = 65535.0
-            # print(f"             B1:{data[1]/s:0.5f} B2:{data[2]/s:0.5f} G1:{data[3]/s:0.5f} G2:{data[4]/s:0.5f} O:{data[5]/s:0.5f} R:{data[6]/s:0.5f}")
+            # self._print(f"             B1:{data[1]/s:0.5f} B2:{data[2]/s:0.5f} G1:{data[3]/s:0.5f} G2:{data[4]/s:0.5f} O:{data[5]/s:0.5f} R:{data[6]/s:0.5f}")
         else:
-            print(result)
+            self._print(result)
     
     def measure_array_raw(self, num_repeats):
         summary =  np.zeros(shape=(4, num_repeats))
@@ -195,7 +194,7 @@ gives back raw data per LED, so 6 16bit
                 for i in range(4):
                     summary[i, n] = data[i]/65536
             else:
-                print(f" Error result in measure report array {result}")
+                self._print(f" Error result in measure report array {result}")
         return summary
     
     def measure_array_n(self, num_repeats):
@@ -206,15 +205,15 @@ gives back raw data per LED, so 6 16bit
 
     def measure_report_array(self, num_repeats):
         summary =  self.measure_array_raw()
-        print(f"Measurement  xx       L      a*       b*")
-        print("       ",end="")
+        self._print(f"Measurement  xx       L      a*       b*")
+        self._print("       ",end="")
         for i in range(4):
-            print(f"{np.average(summary[i]):8.1f} ", end = "")
-        print()
-        print("       ",end="")
+            self._print(f"{np.average(summary[i]):8.1f} ", end = "")
+        self._print()
+        self._print("       ",end="")
         for i in range(4):
-            print(f"{np.std(summary[i]):8.3f} ", end = "")
-        print()
+            self._print(f"{np.std(summary[i]):8.3f} ", end = "")
+        self._print()
     
     def get_int32(self, cmd):
         result = self.send([0x06,0x08,0x16,0x08,0x00,0x0D,0x00,0x04],7)
@@ -228,7 +227,7 @@ gives back raw data per LED, so 6 16bit
     
     def check_result(self,r,expected_result,comment, timeout=100):
         if list(r) != expected_result:
-            print(f"Datacolour checking {cmd} got {r} expected {expected_result} : {comment}")
+            self._print(f"Datacolour checking {cmd} got {r} expected {expected_result} : {comment}")
         assert list(r) == expected_result
         return r
 
@@ -260,7 +259,7 @@ gives back raw data per LED, so 6 16bit
 
     def wait_for_button_press(self):
         r = self.interrupt_get([0x0A,3,0])
-        print(f"Result from button press is {r}")
+        self._print(f"Result from button press is {r}")
 
     def calibrate_send(self, cmd, cmd2, timeout=100, timeout_ok=False):
         """This is a non standard bulk command with 
@@ -299,7 +298,7 @@ gives back raw data per LED, so 6 16bit
         self.check([0x0D, 8, 0x16, 8, 3, 0x33, 0, 1], [0, 0x10],"Calib D ?")
         # E actually gets data as the response is variable
         r = self.send([0x0E, 3, 0x0A])
-        print(f"E Calibration data = {r}")
+        self._print(f"E Calibration data = {r}")
         # self.check([0x0E, 3, 0x0A], [0,0,0x66, 0xEC, 0xC4, 0,0,9,0xC4,0xFF, 0xFC, 0xE3, 0xE8],"Calib E ?")
         self.check([0x0F, 4, 0x12, 0], [0],"Calib F ?", timeout=1000)
         # in test got 0,2

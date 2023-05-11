@@ -98,3 +98,9 @@ However that it is a solveable problem!
 
 
 
+## Developments
+
+- test6.py Testing using textual
+- test7.py swappting to fastapi and htmx 
+
+

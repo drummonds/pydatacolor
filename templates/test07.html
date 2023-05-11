@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+  <head>
+    {{refresh | safe}}
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <nav
+      class="navbar is-fixed-top"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <div class="navbar-item">
+            <form action="/connect" method="post">
+              <button
+                type="submit"
+                class="button {{connect_class}}"
+                title="Press to connect"
+              >
+                Connect
+              </button>
+            </form>
+          </div>
+          <div class="navbar-item" title="Press to Cancel">
+            <form action="/stop" method="post">
+              <button id="cancel" class="button {{cancel_class}}">
+                Cancel
+              </button>
+            </form>
+          </div>
+          <div class="navbar-item">
+            <button id="measure" class="button is-danger is-light">
+              Measure
+            </button>
+          </div>
+          <div class="navbar-item">
+            <button class="button is-danger is-light">Calibrate</button>
+          </div>
+          <a id="state" class="navbar-item"> Home </a>
+          <div class="navbar-item">PyData Color V0.0.0</div>
+        </div>
+      </div>
+    </nav>
+    <div class="columns">
+      <div class="column is-6 is-offset-2">
+        <article class="tile is-child box">
+          <div>
+            <p class="title">Demo</p>
+            <div id="terminal">
+              <h3>Test terminal output start</h3>
+              {{results | safe}}
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="column is-4">
+        <article class="tile is-child box">
+          <p class="title">Info</p>
+          <div class="content">
+            <p>
+              Colorimeter calibration app.
+            </p>
+            <p>
+              Status: {{status}}.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
