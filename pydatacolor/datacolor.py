@@ -204,7 +204,7 @@ gives back raw data per LED, so 6 16bit
         return result
 
     def measure_report_array(self, num_repeats):
-        summary =  self.measure_array_raw()
+        summary =  self.measure_array_raw(num_repeats)
         self._print(f"Measurement  xx       L      a*       b*")
         self._print("       ",end="")
         for i in range(4):
@@ -290,6 +290,7 @@ gives back raw data per LED, so 6 16bit
 
     def calibrate(self):
         # Have problems with next two
+        self._print(f"Only differences from expected data are shown")
         self.check_result(
             self.calibrate_send([0x0B, 8, 0x17, 8, 0, 0x11, 0, 2], [0x10, 0x10]),
             [0],
@@ -298,7 +299,7 @@ gives back raw data per LED, so 6 16bit
         self.check([0x0D, 8, 0x16, 8, 3, 0x33, 0, 1], [0, 0x10],"Calib D ?")
         # E actually gets data as the response is variable
         r = self.send([0x0E, 3, 0x0A])
-        self._print(f"E Calibration data = {r}")
+        self._print(f"Variable response E Calibration data = {r}")
         # self.check([0x0E, 3, 0x0A], [0,0,0x66, 0xEC, 0xC4, 0,0,9,0xC4,0xFF, 0xFC, 0xE3, 0xE8],"Calib E ?")
         self.check([0x0F, 4, 0x12, 0], [0],"Calib F ?", timeout=1000)
         # in test got 0,2

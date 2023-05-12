@@ -15,15 +15,9 @@
     >
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <div class="navbar-item">
+          <div class="navbar-item" title="Press to connect">
             <form action="/connect" method="post">
-              <button
-                type="submit"
-                class="button {{connect_class}}"
-                title="Press to connect"
-              >
-                Connect
-              </button>
+              <button class="button {{connect_class}}">Connect</button>
             </form>
           </div>
           <div class="navbar-item" title="Press to Cancel">
@@ -33,16 +27,23 @@
               </button>
             </form>
           </div>
-          <div class="navbar-item">
-            <button id="measure" class="button is-danger is-light">
-              Measure
-            </button>
+          <div
+            class="navbar-item"
+            title="Press to calibrate using tile in cradle"
+          >
+            <form action="/calibrate" method="post">
+              <button class="button {{calibrate_class}}">Calibrate</button>
+            </form>
           </div>
-          <div class="navbar-item">
-            <button class="button is-danger is-light">Calibrate</button>
+          <div class="navbar-item" title="Press to measure">
+            <form action="/measure" method="post">
+              <button id="measure" class="button {{measure_class}}">
+                Measure
+              </button>
+            </form>
           </div>
           <a id="state" class="navbar-item"> Home </a>
-          <div class="navbar-item">PyData Color V0.0.0</div>
+          <div class="navbar-item">PyData Color V{{version}}</div>
         </div>
       </div>
     </nav>
@@ -62,12 +63,8 @@
         <article class="tile is-child box">
           <p class="title">Info</p>
           <div class="content">
-            <p>
-              Colorimeter calibration app.
-            </p>
-            <p>
-              Status: {{status}}.
-            </p>
+            <p>Colorimeter calibration app.</p>
+            <p>Status: {{status}}.</p>
           </div>
         </article>
       </div>
