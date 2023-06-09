@@ -23,6 +23,8 @@ matplotlib = "^3.7.1"
 colour-science = "^0.4.2"
 pandas = "^2.0.1"
 drawsvg = "^2.1.1"
+scikit-learn = "^1.2.2"
+colormath = "^3.0.0"
 
 [build-system]
 requires = ["poetry-core"]

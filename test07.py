@@ -7,7 +7,7 @@ from pydatacolor import DataColorState, DataColorModel
 from lofigui import aprint, abuffer
 
 
-VERSION = "0.2.14 2022-05-12"
+VERSION = "0.2.15 2022-05-12"
 
 app = FastAPI()
 
