@@ -1,10 +1,10 @@
 from fastapi import FastAPI, Request, BackgroundTasks
-from fastapi.responses import HTMLResponse,FileResponse
+from fastapi.responses import HTMLResponse, FileResponse
 from fastapi.templating import Jinja2Templates
 import uvicorn
 
 from pydatacolor import DataColorState, DataColorModel
-from lofigui import aprint, abuffer
+from lofigui import print, buffer
 
 
 VERSION = "0.2.15 2022-05-12"
@@ -67,7 +67,7 @@ class Controller:
         else:  # self.datacolor and self.datacolor.dev:
             buttons_up(["connect"])
         if self.poll and self.poll_count > 100:
-            aprint(">100 run so going to timeout")
+            print(">100 run so going to timeout")
             self.poll = False
             self.model.state = DataColorState.Failed
         if self.poll:
@@ -78,7 +78,7 @@ class Controller:
         else:
             self.poll_count = 0
             d["refresh"] = ""
-        d["results"] = abuffer()
+        d["results"] = buffer()
         d["status"] = controller.state
         d["version"] = VERSION
         return d
@@ -107,6 +107,7 @@ async def stop(request: Request):
     controller.model.stop()
     return '<head>  <meta http-equiv="Refresh" content="0; URL=/" /></head>'
 
+
 @app.post("/calibrate", response_class=HTMLResponse)
 async def connect(background_tasks: BackgroundTasks):
     background_tasks.add_task(controller.model.calibrate)
@@ -118,10 +119,10 @@ async def connect(background_tasks: BackgroundTasks):
     background_tasks.add_task(controller.model.measure)
     return '<head>  <meta http-equiv="Refresh" content="0; URL=/" /></head>'
 
+
 @app.get("/favicon.ico", response_class=HTMLResponse)
 async def connect(background_tasks: BackgroundTasks):
     return FileResponse("images/favicon.ico")
-
 
 
 if __name__ == "__main__":

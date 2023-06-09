@@ -64,7 +64,7 @@ class Measurement(Static):
     def compose(self) -> ComposeResult:
         """Create child widgets of a stopwatch."""
         yield Button("Measure", id="measure", variant="success")
-        yield ColourDisplay("#FFEFDF",id="result")
+        yield ColourDisplay("#FFEFDF", id="result")
 
 
 class Measurer(App):
